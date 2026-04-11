@@ -2,6 +2,8 @@ set -ouex pipefail
 
 ### 1. Enable the active lionheartp Hyprland COPR
 dnf5 -y copr enable lionheartp/Hyprland
+#Download the NordVPN repo file directly into the container build
+curl -sSL -o /etc/yum.repos.d/nordvpn.repo https://repo.nordvpn.com/yum/nordvpn/fedora/x86_64/nordvpn.repo
 
 ### 2. Install the system base + Noctalia Stack
 dnf5 install -y \
@@ -29,12 +31,15 @@ dnf5 install -y \
     hyprpwcenter \
     hyprshutdown \
     gpu-screen-recorder \
-    nix
+    nix \
+    nordvpn
 
 ### 3. Disable the COPR
 dnf5 -y copr disable lionheartp/Hyprland
+rm /etc/yum.repos.d/nordvpn.repo
 
 ### 4. Enable System Units
 systemctl enable podman.socket
 systemctl enable sddm.service
 systemctl enable nix-daemon.service
+systemctl enable nordvpn.service
