@@ -28,7 +28,8 @@ dnf5 install -y \
     hyprsysteminfo \
     hyprpwcenter \
     hyprshutdown \
-    gpu-screen-recorder
+    gpu-screen-recorder \
+    nix
 
 ### 3. Disable the COPR
 dnf5 -y copr disable lionheartp/Hyprland
@@ -36,3 +37,4 @@ dnf5 -y copr disable lionheartp/Hyprland
 ### 4. Enable System Units
 systemctl enable podman.socket
 systemctl enable sddm.service
+systemctl enable nix-daemon.service
