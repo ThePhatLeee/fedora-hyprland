@@ -67,7 +67,7 @@ RUN dnf5 install -y \
     yazi \
     jq \
     socat \
-    unzip  \
+    unzip 
 ### 3. Disable the COPR
 dnf5 -y copr disable lionheartp/Hyprland
 
