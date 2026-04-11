@@ -10,64 +10,33 @@ dnf5 -y copr enable lionheartp/Hyprland
 # noctalia-hyprland-meta: The entire Wayland/Hyprland core ecosystem
 # kitty: Your lifeline to install Nix tomorrow
 RUN dnf5 install -y \
-    # Session & Portals (Missing in screenshot)
-    sddm \
+    hyprland \
+    noctalia-hyprland-meta \
+    noctalia-shell \
+    noctalia-qs \
+    matugen \
     uwsm \
     xdg-desktop-portal-hyprland \
-    xdg-desktop-portal-gtk \
-    \
-    # The Core + Explicitly forcing the missing daemons
-    noctalia-hyprland-meta \
+    hyprcursor \
     hyprpolkitagent \
+    hypridle \
+    hyprlock \
     hyprpaper \
-    hyprland-plugins \
-    hyprland-contrib \
-    hyprsysteminfo \
-    hyprsunset \
-    hyprshot \
-    hyprwire \
-    hyprlauncher \
-    \
-    # Clipboard & Screenshots
     cliphist \
-    wl-clipboard \
-    grim \
-    slurp \
-    satty \
-    \
-    # Theming & GUI Fixes
-    nwg-look \
+    hyprqt6engine \
+    hyprland-qt-support \
     qt6ct \
+    nwg-look \
+    kitty \
     waypaper \
-    \
-    # File Management & System UI
-    nautilus \
-    gvfs-mtp \
-    udiskie \
-    network-manager-applet \
-    blueman \
-    pavucontrol \
-    brightnessctl \
-    playerctl \
-    \
-    # Auth & Secrets 
-    gnome-keyring \
-    libsecret \
-    \
-    # Display Utilities
-    wlr-randr \
-    kanshi \
-    \
-    # Fonts
-    jetbrains-mono-fonts \
-    fontawesome5-fonts \
-    google-noto-fonts-all \
-    \
-    # CLI Power Tools
-    yazi \
-    jq \
-    socat \
-    unzip 
+    hyprlauncher \
+    hyprshot \
+    hyprpicker \
+    hyprsunset \
+    hyprsysteminfo \
+    hyprpwcenter \
+    hyprshutdown \
+    gpu-screen-recorder
 ### 3. Disable the COPR
 dnf5 -y copr disable lionheartp/Hyprland
 
