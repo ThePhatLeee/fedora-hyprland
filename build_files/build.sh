@@ -8,7 +8,6 @@ dnf5 install -y \
     sddm \
     uwsm \
     xdg-desktop-portal-hyprland \
-    swaync \
     network-manager-applet \
     noctalia-hyprland-meta \
     hyprpolkitagent \
