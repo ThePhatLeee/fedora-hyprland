@@ -27,7 +27,6 @@ RUN dnf5 install -y \
     hyprland-qt-support \
     qt6ct \
     nwg-look \
-    kitty \
     waypaper \
     hyprlauncher \
     hyprshot \
