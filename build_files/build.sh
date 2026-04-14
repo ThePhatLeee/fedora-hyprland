@@ -14,6 +14,7 @@ EOF
 ### 2. Install the system base + Noctalia Stack
 dnf5 install -y \
     sddm \
+    zsh \
     nautilus \
     uwsm \
     xdg-desktop-portal-hyprland \
