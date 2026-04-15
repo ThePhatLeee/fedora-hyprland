@@ -39,6 +39,7 @@ dnf5 install -y \
     hyprshutdown \
     gpu-screen-recorder \
     nix \
+    logiop \
     nordvpn
 
 ### 3. Disable the COPR
@@ -49,3 +50,5 @@ rm /etc/yum.repos.d/nordvpn.repo
 systemctl enable podman.socket
 systemctl enable sddm.service
 systemctl enable nix-daemon.service
+systemctl enable logid
+
